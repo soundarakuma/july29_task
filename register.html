@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Registration Page</title>
+    <style>
+        /* Basic Reset */
+        body, h2, form, input {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Full Height */
+        html, body {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+
+        /* Container */
+        .register-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Register Box */
+        .register-box {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        /* Heading */
+        .register-box h2 {
+            margin-bottom: 1.5rem;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Textbox */
+        .textbox {
+            margin-bottom: 1rem;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        /* Button */
+        .btn {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background: #218838;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .register-box {
+                padding: 1.5rem;
+            }
+
+            .textbox input, .btn {
+                font-size: 0.9rem;
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-box">
+            <h2>Register</h2>
+            <form action="#">
+                <div class="textbox">
+                    <input type="text" placeholder="Full Name" name="fullname" required>
+                </div>
+                <div class="textbox">
+                    <input type="email" placeholder="Email Address" name="email" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Password" name="password" required>
+                </div>
+                <div class="textbox">
+                    <input type="password" placeholder="Confirm Password" name="confirm_password" required>
+                </div>
+                <input type="submit" class="btn" value="Register">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
